@@ -13,9 +13,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/srumplik/assetTracking/issues"
+    "url": "https://github.com/tgathye/Capstone"
   },
-  "homepage": "https://github.com/srumplik/assetTracking#readme",
+  "homepage": "https://github.com/tgathye",
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.10.11",
