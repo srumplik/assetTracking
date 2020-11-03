@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/srumplik/assetTracking.git"
+    "url": "https://github.com/srumplik/assetTracking"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tgathye/Capstone"
+    "url": "https://github.com/srumplik/assetTracking"
   },
-  "homepage": "https://github.com/tgathye",
+  "homepage": "https://github.com/srumplik/assetTracking",
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.10.11",
