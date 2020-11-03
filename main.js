@@ -10,9 +10,17 @@ mongoose.connect('mongodb://localhost:27017/assetTracking', {useNewUrlParser: tr
 // Log HTTP request & responses
 app.use(log('dev'));  // Use the logging tool in the 'dev' preset
 
+// Use PUG template engine
+app.set('views', './views');
+app.set('view engine', 'pug');
+
 // ROUTES - HTTP requests handled here
 app.get('/', function(req,res){ // Server responds to HTTP GET request @ '/' URI with a callback function which takes in two perameters 'req' (request) & 'res' (response).
-	res.send('working');  // The response to the request
+	res.render('index');  // The response to the request
+});
+
+app.get('/asset', function(req,res){
+	res.render('asset');
 });
 
 app.listen(PORT, console.log('Server running at localhost:' + PORT));  // start the Express server at 'localhost:PORT'
