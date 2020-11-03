@@ -4,7 +4,7 @@ mongoDB
 
 ## Use cases
 1 - Auth user to DB
-2 - CRUD for gear config
+2 - CRUD for gear
 3 - CRUD for customers
 4 - Query customer's rental records
 
