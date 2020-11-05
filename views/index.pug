@@ -6,12 +6,14 @@ html
 	body
 		div#title
 			h1 Home of 'Asset Tracking'
-		div#logIn
+		form(action = '/login', method = 'POST')#logIn
 			h3#logInTitle Log In
 			div#userName
-				h6.logIn Username:
-				input
+				label(for = 'username') Username:
+				br
+				input(name = 'username')
 			div#password
-				h6.logIn Password:
-				input
-			button#submit Submit
+				label(for = 'password') Password:
+				br
+				input(name = 'password')
+			button(type = 'submit') Sign in
