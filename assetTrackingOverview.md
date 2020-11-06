@@ -1,14 +1,19 @@
-# System requirements
-nodeJS  
-mongoDB
+### System requirements
++ nodeJS
+	- version 14.15.0
+	- npm version 6.14.8
++ mongoDB (community edition version 4.4.1)
+	- Utilizing localhost
+	- Using default port 27017
+	- mongod service running
 
-## Use cases
+### Use cases
 1 - Auth user to DB  
 2 - CRUD for gear (assets)  
 3 - CRUD for customers  
 4 - Query customer's rental records
 
-## DB Collections & Documents
+### DB Collections & Documents
 + assets    
 	- Asset ID
 	- Serial Number
@@ -27,6 +32,9 @@ mongoDB
 + users
 	- Username
 	- Password
+
+### Application
+ExpressJS framework running on port 8080  
 
 ### Routes
 / <--- home page (log in) --->  
