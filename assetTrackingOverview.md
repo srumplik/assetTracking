@@ -1,3 +1,5 @@
+# Asset Tracking
+A web application for
 ### System requirements
 + nodeJS
 	- version 14.15.0
@@ -11,11 +13,13 @@
 1 - Auth user to DB  
 2 - CRUD for gear (assets)  
 3 - CRUD for customers  
-4 - Query customer's rental records
+4 - CRUD for events
+5 - Query customer's rental records
 
 ### DB Collections & Documents
-+ assets    
++ Assets    
 	- Asset ID
+	- Description
 	- Serial Number
 	- IP address
 	- Subnet Mask
@@ -24,12 +28,31 @@
 	- Currently Rented
 	- Initial cost
 	- Rental Income
-+ clients
-	- Company Name
-	- Contact Name
-	- Contact Phone Number
-	- Assets Rented
-+ users
++ Clients
+	- Customer ID
+	- Organization Name
+	- Organization Contact First Name
+	- Organization Contact Last Name
+	- Organization Contact Phone Number
+	- Organization Address
+	- Organization City
+	- Organization State
+	- Organization Zip Code
+	- Rented Assets
+
++ Events
+	- Event ID
+	- Event Venue
+	- Event Venue Contact First Name
+	- Event Venue Contact Last Name
+	- Event Venue Contact Phone Number
+	- Event Venue Address
+	- Event Venue City
+	- Event Venue State
+	- Event Venue Zip Code
+	- Rental Contract Number
+
++ Users
 	- Username
 	- Password
 
@@ -38,7 +61,7 @@ ExpressJS framework running on port 8080
 
 ### Routes
 / <--- home page (log in) --->  
-/:id <--- home page for logged in user, using user's DB ID as URL ID variable --->  
+/user <--- home page for logged in user, using user's DB ID as URL ID variable --->  
 
 /assets <--- get all assets --->  
 /createasset <--- create asset --->  
