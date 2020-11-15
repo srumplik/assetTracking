@@ -67,23 +67,20 @@ ExpressJS framework running on port 8080
 / <--- home page (log in) --->  
 /user <--- home page for logged in user, using user's DB ID as URL ID variable --->  
 
-/assets <--- get all assets --->  
-/createasset <--- create asset --->  
-/readasset <--- get all assets --->  
-/updateasset <--- update asset --->  
-/deleteasset <--- delete asset --->  
-/:asset <--- get specific asset --->  
+*GET*    /assets <--- get all assets --->  
+*GET*    /:asset <--- get specific asset --->  
+*POST*   /asset <--- create asset --->   
+*PUT*    /asset <--- update asset --->  
+*DELETE* /asset <--- delete asset --->  
 
-/clients <--- get all clients --->  
-/createclient <--- create client --->  
-/readclient <--- get all clients --->  
-/updateclient <--- update client --->  
-/deleteclient <--- delete client --->  
-/:customer <--- get specific client info --->   
+*GET*    /clients <--- get all clients --->  
+*GET*    /:customer <--- get specific client info --->   
+*POST*   /client <--- create client --->  
+*PUT*    /client <--- update client --->  
+*DELETE* /client <--- delete client --->  
 
-/users <--- get all users --->  
-/createuser <--- create user --->  
-/readuser <--- get all users --->  
-/updateuser <--- update user --->  
-/deleteuser <--- delete user --->  
-/:user <--- get specific user --->  
+*GET*    /users <--- get all users --->  
+*GET*    /:user <--- get specific user --->  
+*PUT*    /user <--- create user --->  
+*POST*   /user <--- update user --->  
+*DELETE* /user <--- delete user --->  
