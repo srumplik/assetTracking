@@ -81,6 +81,6 @@ ExpressJS framework running on port 8080
 
 *GET*    /users <--- get all users --->  
 *GET*    /:user <--- get specific user --->  
-*PUT*    /user <--- create user --->  
-*POST*   /user <--- update user --->  
+*POST*    /user <--- create user --->  
+*PUT*   /user <--- update user --->  
 *DELETE* /user <--- delete user --->  
