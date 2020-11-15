@@ -1,6 +1,6 @@
-# Name: CSIS483 Capstone Project - Asset Tracking
-# Purpose: Web Application for Asset Tracking
-# Student: Anthony Gathye
+Name: CSIS483 Capstone Project - Asset Tracking
+Purpose: Web Application for Asset Tracking
+Student: Anthony Gathye
 
 # Asset Tracking
 A web application for
