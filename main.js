@@ -1,3 +1,8 @@
+
+// Name:      CSIS483 Capstone Project - Asset Tracking
+// Purpose:   Web Application for Asset Tracking
+// Student:    Anthony Gathye
+
 var express = require('express');  // Javascript web framework
 var path = require('path');  // tool for getting local directory paths
 var log = require('morgan')  // tool for logging & debugging HTTP request
@@ -12,8 +17,8 @@ var port = process.env.PORT || 8080;  // uses system defined PORT variable or 80
 const connectDb = () => {
 	return mongoose.connect('mongodb://localhost:27017/assetTracking', {useNewUrlParser: true, useUnifiedTopology: true});
 };  // Connect to 'assetTracking' database
-const eraseDb = true;  // variable for initializing DB on app startup
-var User = require('./models/user');  // import models for DB collections
+const initializeDB = require('./db_seeding'); //
+var userModel = require('./models/user');  // import models for DB collections
 
 // Log HTTP request & responses
 app.use(log('dev'));  // Use the logging tool in the 'dev' preset
@@ -50,27 +55,22 @@ app.post('/login',function (req, res){  //  logic for log in page
 			};
 		});
 	};
-
 });
 
 app.get('/user',function(req,res){  //  logged in user page
-	res.send('Successfully logged in')
+	res.render('user')
 });
 
 
-connectDb().then(async () => {
-	/*
-	try {
-		if (eraseDb) {
-			await Promise.all([
-				mongoose.model('User').deleteMany({})
-			]);
-		};
-	} catch (error) {
-		console.log(error);
-	};
-	*/
-	app.listen(port, () =>
-		console.log('Server running at localhost:' + port)
-	);
+// Initialize database and start application
+connectDb().then(() => {  // remove all documents from all collections
+	initializeDB.cleanDB();
 });
+
+connectDb().then(() => {  // add predefined documents to specific collections
+	initializeDB.seedDB();
+});
+
+app.listen(port, () =>  // start the express application
+	console.log('Server running at localhost:' + port)
+);
